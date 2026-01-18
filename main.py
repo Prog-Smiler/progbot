@@ -24,10 +24,15 @@ while running:
     elif "search" in ask:
         import websurfer
 
-    elif "date" or "time" in ask:
-        now = datetime.datetime.now()
-        print("Current date and time: ", end="")
-        print(now)
+    elif ("date") in ask:
+        date = datetime.datetime.now().date()
+        print("Current date: ", end="")
+        print(date)
+    
+    elif "time" in ask:
+        time = datetime.datetime.now().time()
+        print("Current time: ", end="")
+        print(time)
 
     elif "exit" in ask or "quit" in ask:
         running = False
