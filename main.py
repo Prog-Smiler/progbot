@@ -17,14 +17,7 @@ while running:
 
     #Handling different commands
     if "hello" in ask or "hi" in ask:
-        print("Hello! How are you?")
-        mood = input(": ")
-        if "good" in mood or "fine" in mood or "well" in mood or "great" in mood:
-            print("Glad to hear that!")
-            print("How can I assist you today?")
-        else:
-            print("Hope things get better soon!")
-            print("How can I assist you today?")
+        print("Hello! How can i assist you? ")
 
     elif "calculator" in ask:
         import calculator
