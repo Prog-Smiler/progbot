@@ -1,6 +1,11 @@
 #importing libraries
 import webbrowser
 import datetime
+import time
+import os
+from pydub import AudioSegment
+from pydub.playback import play
+ 
 
 # Main loop
 running = True
@@ -11,7 +16,17 @@ while running:
     ask = ask.lower()
 
     #Handling different commands
-    if "calculator" in ask:
+    if "hello" in ask or "hi" in ask:
+        print("Hello! How are you?")
+        mood = input(": ")
+        if "good" in mood or "fine" in mood or "well" in mood or "great" in mood:
+            print("Glad to hear that!")
+            print("How can I assist you today?")
+        else:
+            print("Hope things get better soon!")
+            print("How can I assist you today?")
+
+    elif "calculator" in ask:
         import calculator
     
     elif "websites list" in ask:
@@ -29,10 +44,24 @@ while running:
         print("Current date: ", end="")
         print(date)
     
-    elif "time" in ask:
+    elif "time rn" in ask:
         time = datetime.datetime.now().time()
         print("Current time: ", end="")
         print(time)
+
+    elif "timer" in ask:
+        sec = int(input("Enter time in seconds: "))
+        min = int(input("Enter time in minutes: "))
+        hr = int(input("Enter time in hours: "))
+        total_seconds = sec + (min * 60) + (hr * 3600)
+        print("Timer started for", hr, "hours ", min, "minutes and ", sec, "seconds.")
+        time.sleep(total_seconds)
+        audio = AudioSegment.from_mp3("alarn.mp3")
+        play(audio)  
+        print("Time's up!")
+
+    elif "clear" in ask:
+        os.system('cls' if os.name == 'nt' else 'clear')
 
     elif "exit" in ask or "quit" in ask:
         running = False
