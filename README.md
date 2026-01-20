@@ -12,7 +12,8 @@ List to it's commands:
 7. 'time rn' -> Informs you about Time right now
 8. 'timer' -> Runs a timer. ! while timer is running you cannot use the chat bot for the until the timer is up
 9. 'clear' -> Clears the chat with the bot
-10. 'exit' or 'quit' -> Ends the program
+10. 'random number' -> Runs a random number generator
+11. 'exit' or 'quit' -> Ends the program
 
 The codes are well commented making it easier for you to edit it.
 
