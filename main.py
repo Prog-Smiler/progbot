@@ -3,6 +3,7 @@ import webbrowser
 import datetime
 import time
 import os
+import random
 from pydub import AudioSegment
 from pydub.playback import play
  
@@ -39,8 +40,8 @@ while running:
     
     elif "time rn" in ask:
         time = datetime.datetime.now().time()
-        print("Current time: ", end="")
-        print(time)
+        print(time.strftime("%H:%M:%S"))
+        
 
     elif "timer" in ask:
         sec = int(input("Enter time in seconds: "))
@@ -52,12 +53,20 @@ while running:
         audio = AudioSegment.from_mp3("alarn.mp3")
         play(audio)  
         print("Time's up!")
+    
+    elif "random number" in ask:
+        
+        n = int(input("Enter the upper limit for the random number: "))
+        print(random.randint(1, n))
 
     elif "clear" in ask:
         os.system('cls' if os.name == 'nt' else 'clear')
 
     elif "exit" in ask or "quit" in ask:
         running = False
+    
+    elif ask == None:
+        pass
     
     # Unrecognized command
     else:
