@@ -71,3 +71,5 @@ while running:
     # Unrecognized command
     else:
         print("Command not recognized. Please try again.")
+
+print("Exiting program. Goodbye!")
