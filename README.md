@@ -14,6 +14,7 @@ List to it's commands:
 9. 'clear' -> Clears the chat with the bot
 10. 'random number' -> Runs a random number generator
 11. 'exit' or 'quit' -> Ends the program
+12. 'help' -> Lists all the commands available
 
 The codes are well commented making it easier for you to edit it.
 
