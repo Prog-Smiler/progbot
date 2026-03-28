@@ -19,6 +19,21 @@ while running:
     #Handling different commands
     if "hello" in ask or "hi" in ask:
         print("Hello! How can i assist you? ")
+    
+    elif "help" in ask:
+        print("Available commands: ")
+        print("- Hello/Hi: Greet the assistant")
+        print("- Help: Show this help message")
+        print("- Calculator: Open the calculator module")
+        print("- Websites list: Show a list of websites")
+        print("- Open website: Open a specific website")
+        print("- Search: Search the web for a query")
+        print("- Date: Show the current date")
+        print("- Time rn: Show the current time")
+        print("- Timer: Set a timer for a specified duration")
+        print("- Random number: Generate a random number up to a specified limit")
+        print("- Clear: Clear the console")
+        print("- Exit/Quit: Exit the program") 
 
     elif "calculator" in ask:
         import calculator
